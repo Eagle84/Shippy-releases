@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shippy — Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>📦 Shippy</h1>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy-policy.html" class="active">Privacy Policy</a>
+  <a href="support.html">Support</a>
+</nav>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: July 4, 2026</p>
+
+  <p>Shippy ("the app") is an Android app that helps you track AliExpress orders and shipments. This policy explains what data the app accesses, what it stores, and what it shares.</p>
+
+  <h2>Information we collect</h2>
+  <ul>
+    <li><strong>Account sign-in.</strong> Shippy uses Firebase Authentication to identify your Shippy account, via Google Sign-In or an email/password you create. We receive your name, email address, and profile photo (if using Google Sign-In) to display inside the app.</li>
+    <li><strong>AliExpress order data.</strong> When you log in to AliExpress inside Shippy, the app reads the order list, product details, and tracking timeline from your own AliExpress account session, the same way the AliExpress app or website would show them to you. Shippy does not access AliExpress accounts other than the one you sign in with.</li>
+    <li><strong>Crash and usage diagnostics.</strong> Shippy uses Firebase Crashlytics and Firebase Analytics to detect crashes and understand feature usage (e.g. how often sync runs, which screens are used). These are standard, aggregated diagnostics — not the contents of your orders.</li>
+  </ul>
+
+  <h2>What Shippy does NOT do</h2>
+  <ul>
+    <li>Shippy does not read your Gmail or any email account. It never has access to your email inbox.</li>
+    <li>Shippy has no backend server of its own. Your order and shipment data is stored locally on your device (a local Room database) and is never uploaded to a Shippy-controlled server.</li>
+    <li>Shippy does not sell or share your data with advertisers.</li>
+  </ul>
+
+  <h2>Third parties involved</h2>
+  <ul>
+    <li><strong>Firebase (Google)</strong> — Authentication, Crashlytics, and Analytics. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy documentation</a>.</li>
+    <li><strong>AliExpress</strong> — order and tracking data is read directly from the AliExpress session you log into on your own device. Shippy does not receive your AliExpress password; the login happens in a standard secure web view controlled by AliExpress.</li>
+  </ul>
+
+  <h2>Data retention & deletion</h2>
+  <p>Your order data lives on your device until you delete the app, clear its storage, or use the in-app "Clear all data" option. To delete your Shippy account (Firebase Authentication record) and any associated Crashlytics/Analytics identifiers, email us at the address below and we will remove them.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Shippy is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy as the app evolves. Material changes will be reflected on this page with an updated date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or deletion requests: <a href="mailto:igal.bogu@gmail.com">igal.bogu@gmail.com</a></p>
+</main>
+<footer>
+  Shippy is an independent project, not affiliated with AliExpress or Alibaba Group.
+</footer>
+</body>
+</html>
