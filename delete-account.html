@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shippy — Delete Account & Data</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>📦 Shippy</h1>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="support.html">Support</a>
+  <a href="delete-account.html" class="active">Delete Account</a>
+</nav>
+<main>
+  <h1>Delete your account and data</h1>
+
+  <div class="card">
+    <h2 style="margin-top:0; border-top:none; padding-top:0;">In the app</h2>
+    <p>Open Shippy → Settings → Account → <strong>Delete account</strong>. This permanently deletes your sign-in account (Firebase Authentication record) and clears all order/shipment data stored on your device.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0; border-top:none; padding-top:0;">By email</h2>
+    <p>If you no longer have the app installed, or the in-app option isn't available on your version, email <a href="mailto:igal.bogu@gmail.com">igal.bogu@gmail.com</a> from the address associated with your account and request deletion. We will delete your account and associated data within 30 days.</p>
+  </div>
+
+  <h2>What gets deleted</h2>
+  <ul>
+    <li>Your sign-in account (email, name, profile photo) from Firebase Authentication.</li>
+    <li>Any diagnostic identifiers tied to your account in Firebase Crashlytics and Analytics.</li>
+  </ul>
+
+  <h2>What is not affected</h2>
+  <ul>
+    <li>Your AliExpress account itself — Shippy only reads your order session on-device and never modifies or deletes anything on AliExpress.</li>
+    <li>Order/shipment data already stored locally on your device is removed when you uninstall the app or use "Clear all data" in Settings, independent of account deletion.</li>
+  </ul>
+</main>
+<footer>
+  Shippy is an independent project, not affiliated with AliExpress or Alibaba Group.
+</footer>
+</body>
+</html>
