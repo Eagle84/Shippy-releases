@@ -4,40 +4,344 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shippy — Track every package in one place</title>
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Shippy pulls your AliExpress orders and shipments into one clean, private timeline on your Android phone. Private by design — everything stays on your device.">
+<link rel="icon" href="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s64">
+<meta property="og:title" content="Shippy — Track every package in one place">
+<meta property="og:description" content="Private, on-device parcel & AliExpress order tracking for Android.">
+<meta property="og:image" content="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#4CAF50; --green-dark:#38953c; --green-deep:#2e7d32;
+    --sky:#8ecdf0; --sky-soft:#dcf0fb;
+    --ink:#182b3a; --ink-soft:#4a5c69;
+    --cream:#f7f4e9; --paper:#ffffff;
+    --ring:rgba(24,43,58,.08);
+    --shadow:0 18px 50px -18px rgba(24,43,58,.35);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.15;margin:0;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .appicon{border-radius:22%;object-fit:cover;display:block}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(255,255,255,.82);border-bottom:1px solid var(--ring)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Poppins';font-weight:700;font-size:20px}
+  .brand img{width:38px;height:38px;box-shadow:0 4px 12px -4px rgba(24,43,58,.4)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:var(--ink-soft);font-weight:500;font-size:15px;transition:color .2s}
+  .nav-links a:hover{color:var(--green-deep)}
+  .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .15s,background .2s}
+  .nav-cta:hover{transform:translateY(-1px);background:#223b4f}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* Hero with pastoral Shippy background */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#dcf0fb 0%, #eaf6f2 42%, #f1f8ef 100%);padding:72px 0 150px}
+  .hero .clouds{position:absolute;inset:0;pointer-events:none}
+  .cloud{position:absolute;background:#ffffff;border-radius:999px;opacity:.75;filter:blur(.2px)}
+  .cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .c1{width:120px;height:34px;top:60px;left:8%}
+  .c1::before{width:60px;height:60px;top:-26px;left:18px}.c1::after{width:46px;height:46px;top:-18px;left:62px}
+  .c2{width:90px;height:26px;top:120px;right:12%}
+  .c2::before{width:44px;height:44px;top:-20px;left:14px}.c2::after{width:34px;height:34px;top:-12px;left:46px}
+  .c3{width:70px;height:20px;top:38px;right:32%}
+  .c3::before{width:34px;height:34px;top:-16px;left:10px}.c3::after{width:26px;height:26px;top:-9px;left:36px}
+  .hills{position:absolute;left:0;right:0;bottom:0;width:100%;display:block}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .badge-pill{display:inline-flex;align-items:center;gap:8px;background:#ffffff;color:var(--green-deep);font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid #cdeccb;box-shadow:0 6px 18px -10px rgba(24,43,58,.3)}
+  .badge-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(76,175,80,.2)}
+  .hero h1{font-size:clamp(34px,5vw,54px);font-weight:800;margin:22px 0 0}
+  .hero h1 .hl{color:var(--green-deep);white-space:nowrap}
+  .hero p.sub{font-size:19px;color:var(--ink-soft);margin:20px 0 0;max-width:520px}
+  .stores{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .store-btn{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:12px 22px;border-radius:14px;transition:transform .15s,box-shadow .2s;box-shadow:0 10px 24px -12px rgba(24,43,58,.6)}
+  .store-btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(24,43,58,.65)}
+  .store-btn svg{width:26px;height:26px;flex:none}
+  .store-btn .st{display:flex;flex-direction:column;line-height:1.1}
+  .store-btn .st small{font-size:11px;opacity:.8;font-weight:500}
+  .store-btn .st b{font-size:17px;font-family:'Poppins';font-weight:600}
+  .store-btn.soon{background:rgba(255,255,255,.75);color:var(--ink-soft);box-shadow:none;cursor:default;position:relative;border:1px solid var(--ring)}
+  .store-btn.soon:hover{transform:none}
+  .store-btn.soon .tag{position:absolute;top:-9px;right:-9px;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px}
+  .hero-note{margin-top:18px;font-size:13.5px;color:var(--ink-soft)}
+
+  /* Phone mockup — realistic Android tracking app */
+  .phone-stage{display:flex;justify-content:center;position:relative}
+  .phone{position:relative;width:308px;border-radius:42px;background:#0f1d28;padding:11px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
+  .phone .notch{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:7px;border-radius:999px;background:#2a3b49;z-index:3}
+  .screen{border-radius:32px;overflow:hidden;background:#f4f6f5;height:600px;display:flex;flex-direction:column}
+  .sbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px 4px;font-size:12px;font-weight:600;color:#17303f}
+  .sbar .ic{display:flex;gap:5px;align-items:center}
+  .appbar{background:var(--green);color:#fff;padding:10px 16px 16px}
+  .appbar .top{display:flex;align-items:center;justify-content:space-between}
+  .appbar .ttl{display:flex;align-items:center;gap:9px;font-family:'Poppins';font-weight:600;font-size:17px}
+  .appbar .ttl img{width:26px;height:26px;border-radius:7px}
+  .appbar .acts{display:flex;gap:14px;font-size:15px;opacity:.95}
+  .search{margin-top:14px;background:rgba(255,255,255,.95);border-radius:12px;padding:9px 12px;display:flex;align-items:center;gap:8px;color:#7b8893;font-size:13px}
+  .chips{display:flex;gap:8px;padding:12px 16px 4px;overflow:hidden}
+  .chip{font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:999px;background:#fff;color:#51606b;border:1px solid #e4e8e8;white-space:nowrap}
+  .chip.on{background:#e7f6e6;color:var(--green-deep);border-color:#cdeccb}
+  .list{padding:6px 14px;overflow:hidden;flex:1}
+  .ocard{background:#fff;border:1px solid #eceeed;border-radius:16px;padding:13px;margin-bottom:11px;box-shadow:0 6px 16px -14px rgba(24,43,58,.5)}
+  .ohead{display:flex;gap:11px;align-items:center}
+  .othumb{width:44px;height:44px;border-radius:11px;flex:none;display:grid;place-items:center;font-size:20px}
+  .t-a{background:#e7f6e6}.t-b{background:#dff0fb}.t-c{background:#fdf0e0}
+  .ometa{flex:1;min-width:0}
+  .ometa .ot{font-weight:600;font-size:13.5px;color:#17303f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ometa .os{font-size:11px;color:#8b97a1;margin-top:1px}
+  .ostat{font-size:10px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap;align-self:flex-start}
+  .s-g{background:#e7f6e6;color:var(--green-deep)}.s-b{background:#dff0fb;color:#1f6ea8}.s-y{background:#fff3d6;color:#9a6b00}
+  .track{display:flex;align-items:center;margin-top:13px}
+  .node{width:13px;height:13px;border-radius:50%;background:#e2e6e6;flex:none;position:relative;z-index:2}
+  .node.done{background:var(--green)}
+  .node.cur{background:#fff;border:3px solid var(--green);width:15px;height:15px}
+  .seg{height:3px;flex:1;background:#e2e6e6;border-radius:2px}
+  .seg.done{background:var(--green)}
+  .tlabels{display:flex;justify-content:space-between;margin-top:6px;font-size:8.5px;color:#9aa6ae;font-weight:500}
+  .eta{margin-top:11px;display:flex;align-items:center;gap:7px;font-size:11.5px;color:#17303f;font-weight:600}
+  .eta .d{width:6px;height:6px;border-radius:50%;background:var(--green)}
+  .bnav{background:#fff;border-top:1px solid #eceeed;display:flex;justify-content:space-around;padding:9px 0 12px}
+  .bnav div{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9.5px;color:#9aa6ae;font-weight:600}
+  .bnav div.on{color:var(--green-deep)}
+  .bnav .bi{font-size:16px}
+
+  /* Trust strip */
+  .strip{background:var(--cream);padding:20px 0}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:center;align-items:center;color:var(--ink-soft);font-size:14px;font-weight:500}
+  .strip b{color:var(--ink)}
+
+  /* Features */
+  section.block{padding:84px 0}
+  .eyebrow{text-align:center;color:var(--green-deep);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  .block h2{text-align:center;font-size:clamp(27px,3.6vw,38px);font-weight:700;margin:12px auto 0;max-width:640px}
+  .block .lead{text-align:center;color:var(--ink-soft);font-size:17px;max-width:600px;margin:16px auto 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  .card{background:#fff;border:1px solid var(--ring);border-radius:20px;padding:28px;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card .emoji{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:#e7f6e6;margin-bottom:18px}
+  .card:nth-child(2) .emoji{background:#dff0fb}.card:nth-child(3) .emoji{background:#fdf0e0}
+  .card:nth-child(4) .emoji{background:#efe7fb}.card:nth-child(5) .emoji{background:#fde7ee}.card:nth-child(6) .emoji{background:#e6f6f2}
+  .card h3{font-size:19px;font-weight:600;margin-bottom:8px}
+  .card p{color:var(--ink-soft);font-size:15px;margin:0}
+  @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.cards{grid-template-columns:1fr}}
+
+  /* How it works */
+  .how{background:linear-gradient(180deg,#f1f8ef,#fbfdfb)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+  .step{text-align:center;padding:12px}
+  .step .n{width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;font-family:'Poppins';font-weight:700;font-size:20px;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 10px 22px -10px rgba(76,175,80,.8)}
+  .step h3{font-size:18px;font-weight:600;margin-bottom:6px}
+  .step p{color:var(--ink-soft);font-size:15px;margin:0}
+  @media(max-width:700px){.steps{grid-template-columns:1fr;gap:34px}}
+
+  /* CTA */
+  .cta{background:linear-gradient(120deg,var(--green-deep),var(--green));color:#fff;border-radius:28px;padding:56px 40px;text-align:center;margin:0 auto;position:relative;overflow:hidden}
+  .cta::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.12)}
+  .cta::before{content:"";position:absolute;left:-50px;bottom:-80px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.1)}
+  .cta h2{font-size:clamp(26px,3.4vw,36px);color:#fff;position:relative}
+  .cta p{margin:14px auto 0;max-width:520px;opacity:.92;font-size:17px;position:relative}
+  .cta .stores{justify-content:center;position:relative}
+  .cta .store-btn{background:#fff;color:var(--ink)}
+  .cta .store-btn.soon{background:rgba(255,255,255,.18);color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.3)}
+  .cta .store-btn.soon .tag{background:var(--ink)}
+
+  /* Footer */
+  footer{padding:54px 0 40px;border-top:1px solid var(--ring);margin-top:84px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px}
+  .foot .brand{font-size:18px}
+  .foot nav{display:flex;flex-wrap:wrap;gap:22px}
+  .foot nav a{color:var(--ink-soft);font-size:14.5px;font-weight:500}
+  .foot nav a:hover{color:var(--green-deep)}
+  .foot-note{margin-top:26px;color:var(--ink-soft);font-size:13px;max-width:620px}
+  .foot-note a{color:var(--green-deep);font-weight:600}
+</style>
 </head>
 <body>
+
 <header>
-  <h1>📦 Shippy</h1>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img class="appicon" src="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s96" alt="Shippy">
+      Shippy
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="support.html">Support</a>
+      <a class="nav-cta" href="#get">Get the app</a>
+    </nav>
+  </div>
 </header>
-<nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="privacy-policy.html">Privacy Policy</a>
-  <a href="support.html">Support</a>
-  <a href="delete-account.html">Delete Account</a>
-</nav>
-<main>
-  <p class="muted">Track your AliExpress orders and shipments in one clean, private timeline — right on your Android phone.</p>
 
-  <div class="card">
-    <h2 style="margin-top:0; border-top:none; padding-top:0;">What Shippy does</h2>
-    <ul>
-      <li>Signs in to your own AliExpress account to read your order and tracking history — nothing is scraped from anyone else's data.</li>
-      <li>Builds a single timeline per order: carrier updates, status, and delivery estimates.</li>
-      <li>Stores everything locally on your device (Room database). Your order data is never uploaded to a Shippy server, because there isn't one.</li>
-      <li>Sign in with Google or email/password (Firebase Authentication) just to identify your Shippy account across devices.</li>
-    </ul>
+<a id="top"></a>
+<section class="hero">
+  <div class="clouds">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
   </div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge-pill"><span class="dot"></span>Private parcel tracking for Android</span>
+      <h1>Track every package in <span class="hl">one place</span>.</h1>
+      <p class="sub">Shippy pulls your AliExpress orders and shipments into one clean, private timeline — right on your Android phone. No clutter, no accounts to chase, no data leaving your device.</p>
+      <div class="stores" id="get">
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.shippy" target="_blank" rel="noopener">
+          <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D4FF" d="M78 8v496c0 9 8 13 14 7l135-135-135-135L92 1c-6-6-14-2-14 7z"/><path fill="#00F076" d="M78 8c0-5 3-8 7-8 2 0 4 1 7 3l180 104-56 56L78 8z"/><path fill="#FFC107" d="M272 107l80 46c14 8 14 28 0 36l-80 46-56-56 56-56z"/><path fill="#FF3A44" d="M92 509c-2 2-4 3-7 3-4 0-7-3-7-8l145-145 56 56L92 509z"/></svg>
+          <span class="st"><small>GET IT ON</small><b>Google Play</b></span>
+        </a>
+        <span class="store-btn soon">
+          <span class="tag">Coming soon</span>
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318 268c-1-57 46-84 48-85-26-38-67-43-81-44-34-3-67 20-84 20s-44-20-73-19c-37 1-72 22-91 55-39 68-10 168 28 223 19 27 41 57 70 56 28-1 39-18 73-18s43 18 73 17c30-1 49-27 67-54 21-31 30-61 30-62-1-1-58-22-58-89z"/><path fill="currentColor" d="M263 57c15-19 26-45 23-71-22 1-49 15-65 34-14 16-27 43-24 68 25 2 50-13 66-31z"/></svg>
+          <span class="st"><small>Download on the</small><b>App Store</b></span>
+        </span>
+      </div>
+      <p class="hero-note">Android 8.0+ · Free · No ads · Your order data never leaves your phone.</p>
+    </div>
 
-  <div class="card">
-    <h2 style="margin-top:0; border-top:none; padding-top:0;">Get the app</h2>
-    <p>Shippy is in closed testing on Google Play ahead of public release. Check back here for the Play Store link once it opens to production.</p>
+    <div class="phone-stage">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="sbar"><span>9:41</span><span class="ic">··· ▪ 100%</span></div>
+          <div class="appbar">
+            <div class="top">
+              <div class="ttl"><img class="appicon" src="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s64" alt="">Shippy</div>
+              <div class="acts">🔔 ⋮</div>
+            </div>
+            <div class="search">🔎 Search orders or tracking number</div>
+          </div>
+          <div class="chips">
+            <span class="chip on">All · 6</span><span class="chip">In transit</span><span class="chip">Out for delivery</span><span class="chip">Delivered</span>
+          </div>
+          <div class="list">
+            <div class="ocard">
+              <div class="ohead">
+                <div class="othumb t-a">🎧</div>
+                <div class="ometa"><div class="ot">Wireless Earbuds Pro (ANC)</div><div class="os">AliExpress · LP00 4821 7735 CN</div></div>
+                <div class="ostat s-g">Out for delivery</div>
+              </div>
+              <div class="track"><span class="node done"></span><span class="seg done"></span><span class="node done"></span><span class="seg done"></span><span class="node done"></span><span class="seg done"></span><span class="node cur"></span><span class="seg"></span><span class="node"></span></div>
+              <div class="tlabels"><span>Ordered</span><span>Shipped</span><span>In transit</span><span>Out</span><span>Delivered</span></div>
+              <div class="eta"><span class="d"></span>Arriving today, by 6:00 PM</div>
+            </div>
+            <div class="ocard">
+              <div class="ohead">
+                <div class="othumb t-b">⌚</div>
+                <div class="ometa"><div class="ot">Smartwatch Band (2-pack)</div><div class="os">AliExpress · YT93 1182 0097 44</div></div>
+                <div class="ostat s-b">In transit</div>
+              </div>
+              <div class="track"><span class="node done"></span><span class="seg done"></span><span class="node done"></span><span class="seg done"></span><span class="node cur"></span><span class="seg"></span><span class="node"></span><span class="seg"></span><span class="node"></span></div>
+              <div class="tlabels"><span>Ordered</span><span>Shipped</span><span>In transit</span><span>Out</span><span>Delivered</span></div>
+              <div class="eta"><span class="d"></span>Left sorting center · est. Nov 21</div>
+            </div>
+            <div class="ocard">
+              <div class="ohead">
+                <div class="othumb t-c">🔌</div>
+                <div class="ometa"><div class="ot">USB-C Fast Charger 65W</div><div class="os">AliExpress · SF61 7742 9980 05</div></div>
+                <div class="ostat s-y">Shipped</div>
+              </div>
+            </div>
+          </div>
+          <div class="bnav">
+            <div class="on"><span class="bi">📦</span>Orders</div>
+            <div><span class="bi">🕑</span>Timeline</div>
+            <div><span class="bi">⚙️</span>Settings</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <svg class="hills" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,70 C240,20 420,110 720,80 C1020,50 1200,120 1440,70 L1440,150 L0,150 Z" fill="#8fd06f" opacity=".55"></path>
+    <path d="M0,100 C280,60 520,140 820,110 C1120,80 1280,140 1440,100 L1440,150 L0,150 Z" fill="#5bbf47" opacity=".85"></path>
+    <path d="M0,128 C300,108 560,150 900,132 C1180,118 1320,150 1440,130 L1440,150 L0,150 Z" fill="#4CAF50"></path>
+  </svg>
+</section>
 
-  <p><a href="privacy-policy.html">Read the Privacy Policy →</a></p>
-</main>
+<div class="strip">
+  <div class="wrap">
+    <span>🔒 <b>On-device only</b></span>
+    <span>📦 <b>One timeline per order</b></span>
+    <span>🚚 <b>Live carrier updates</b></span>
+    <span>🚫 <b>No ads, no tracking</b></span>
+  </div>
+</div>
+
+<section class="block" id="features">
+  <div class="wrap">
+    <p class="eyebrow">Why Shippy</p>
+    <h2>Everything you ordered, nothing you didn't ask for</h2>
+    <p class="lead">Shippy does one thing well: it keeps your parcels organized and your data yours.</p>
+    <div class="cards">
+      <div class="card"><div class="emoji">📦</div><h3>One clean timeline</h3><p>Every order becomes a single timeline — carrier updates, status changes, and delivery estimates in one scroll.</p></div>
+      <div class="card"><div class="emoji">🔒</div><h3>Private by design</h3><p>Your order data is stored locally on your device. There's no Shippy server, so nothing is uploaded — ever.</p></div>
+      <div class="card"><div class="emoji">🛒</div><h3>Reads your own orders</h3><p>Signs in to your own AliExpress account to read your order and tracking history. Nothing is scraped from anyone else.</p></div>
+      <div class="card"><div class="emoji">🚚</div><h3>Live delivery status</h3><p>See what's shipped, in transit, out for delivery, or delivered — with estimates so you know what lands when.</p></div>
+      <div class="card"><div class="emoji">🔔</div><h3>Stay in the loop</h3><p>Follow each parcel's progress at a glance without digging through emails or app notifications.</p></div>
+      <div class="card"><div class="emoji">⚡</div><h3>Light and fast</h3><p>No ads, no bloat, no account to create for Shippy itself. Just open it and see where your stuff is.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block how" id="how">
+  <div class="wrap">
+    <p class="eyebrow">Getting started</p>
+    <h2>Up and running in under a minute</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Install Shippy</h3><p>Grab it from Google Play and open the app on your Android phone.</p></div>
+      <div class="step"><div class="n">2</div><h3>Connect your account</h3><p>Sign in to your own AliExpress account so Shippy can read your order history on-device.</p></div>
+      <div class="step"><div class="n">3</div><h3>Track everything</h3><p>Your orders appear as clean timelines — watch each package make its way to your door.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Ready to see all your packages in one place?</h2>
+      <p>Shippy is free, lightweight and built for Android. Get it on Google Play and keep every order in one timeline.</p>
+      <div class="stores">
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.shippy" target="_blank" rel="noopener">
+          <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D4FF" d="M78 8v496c0 9 8 13 14 7l135-135-135-135L92 1c-6-6-14-2-14 7z"/><path fill="#00F076" d="M78 8c0-5 3-8 7-8 2 0 4 1 7 3l180 104-56 56L78 8z"/><path fill="#FFC107" d="M272 107l80 46c14 8 14 28 0 36l-80 46-56-56 56-56z"/><path fill="#FF3A44" d="M92 509c-2 2-4 3-7 3-4 0-7-3-7-8l145-145 56 56L92 509z"/></svg>
+          <span class="st"><small>GET IT ON</small><b>Google Play</b></span>
+        </a>
+        <span class="store-btn soon">
+          <span class="tag">Coming soon</span>
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318 268c-1-57 46-84 48-85-26-38-67-43-81-44-34-3-67 20-84 20s-44-20-73-19c-37 1-72 22-91 55-39 68-10 168 28 223 19 27 41 57 70 56 28-1 39-18 73-18s43 18 73 17c30-1 49-27 67-54 21-31 30-61 30-62-1-1-58-22-58-89z"/><path fill="currentColor" d="M263 57c15-19 26-45 23-71-22 1-49 15-65 34-14 16-27 43-24 68 25 2 50-13 66-31z"/></svg>
+          <span class="st"><small>Download on the</small><b>App Store</b></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  Shippy is an independent project, not affiliated with AliExpress or Alibaba Group.
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top">
+        <img class="appicon" src="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s64" alt="Shippy">
+        Shippy
+      </a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="delete-account.html">Delete Account</a>
+        <a href="mailto:shippy@echlonlabs.com">Contact</a>
+      </nav>
+    </div>
+    <p class="foot-note">
+      Shippy is an independent project by <a href="https://echlonlabs.com" target="_blank" rel="noopener">EchlonLabs</a>, not affiliated with AliExpress or Alibaba Group. Questions? <a href="mailto:shippy@echlonlabs.com">shippy@echlonlabs.com</a>
+    </p>
+  </div>
 </footer>
+
 </body>
 </html>
