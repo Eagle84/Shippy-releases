@@ -1,451 +1,195 @@
 {
- "updated": "2026-11-16T16:13:39Z",
+ "updated": "2026-11-16T17:39:11Z",
  "rates": {
   "EUR": 0.907261,
   "ILS": 3.220062
  },
  "deals": [
   {
-   "id": "1005010225246671",
+   "id": "1005012168937351",
    "store": "ALIEXPRESS",
-   "title": "240W Nylon USB Type C Super Fast Charging Cable For Samsung Xiaomi",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sa67c2331a7554c178f16eaa952cf45a0x.jpg_350x350.jpg",
-   "price": 1.36,
+   "title": "EWA MagOne 3rd Gen Phone Grip Stand with Magnetic Ring Holder Compatible with MagSafe Kickstand Loop for iPhone 17~12 Series",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Se40d938bdb7d459392988afacc0bb9da0.png",
+   "price": 13.22,
+   "was": 24.99,
    "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005010225246671.html",
+   "url": "https://www.aliexpress.com/item/1005012168937351.html",
+   "category": "Phones & Telecommunications Accessories",
+   "sold": 2259,
+   "rating": 4.9,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/Se40d938bdb7d459392988afacc0bb9da0.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sa7c529fe13d54516ad743ae6cdbc781a0.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Saf8a5903b741410ab5dbdab9a5e09c6cv.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sdc80ccef276548948f8812d679291d6el.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sd95a4c2445844530a35c9f1f4cffb647W.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S34e45edf94f2448c81ccffb30c679750q.png"
+   ],
+   "history": [
+    [
+     "2026-11-16",
+     13.22
+    ]
+   ]
+  },
+  {
+   "id": "1005010206544563",
+   "store": "ALIEXPRESS",
+   "title": "EWA Magnetic Phone Ring, Suitable for MagSafe Grip [Super Magnet] iPhone Fashion Shining Ring Phone Stand Accessories",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S10788a69dc9d4d49b224e4725469b48fu.png",
+   "price": 12.7,
+   "was": 24,
+   "currency": "$",
+   "url": "https://www.aliexpress.com/item/1005010206544563.html",
+   "category": "Phones & Telecommunications Accessories",
+   "sold": 1570,
+   "rating": 4.8,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/S10788a69dc9d4d49b224e4725469b48fu.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S2ec25f9c3d3941809400945aad8dd3e4r.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S848978a44e874855871f5f0137c2cbdav.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S3317adff4a8b40b99ad59f6b7831719cn.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S288f526edc524077a0117698f6ded976v.png",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S596b3bb9394446f79ff88efbce11fafde.png"
+   ],
+   "history": [
+    [
+     "2026-11-16",
+     12.7
+    ]
+   ]
+  },
+  {
+   "id": "1005013350188191",
+   "store": "ALIEXPRESS",
+   "title": "Magical Christmas Projection Night Light,USB Christmas Projector Indoor,Magical Christmas Projection Night Light Holiday Room",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Scee537e9f2bd48568279499225e045a3v.jpg",
+   "price": 13.59,
+   "was": 30.2,
+   "currency": "$",
+   "url": "https://www.aliexpress.com/item/1005013350188191.html",
+   "category": "Home & Garden",
+   "sold": 541,
+   "rating": 2.6,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/Scee537e9f2bd48568279499225e045a3v.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sb5be310c16774e068daec748a23471e4z.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S457203af82dd4f3b91b05e3fb079a9ccD.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S93a1b114ca4b4c959e2621e1b7b8e933y.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sec43d4be92584e36a43494f6123fd67aK.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S1bafe95828dd49069d27e95791e43cd74.jpg"
+   ],
+   "history": [
+    [
+     "2026-11-16",
+     13.59
+    ]
+   ]
+  },
+  {
+   "id": "1005012151431399",
+   "store": "ALIEXPRESS",
+   "title": "T6 LED High Power Tactical Flashlight Aluminum Alloy Outdoor Torch Portable Emergency Light Camping Hiking Battery Not Included",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S7610cd87c8aa4ca59953c607b5c4501cm.jpg",
+   "price": 7.29,
+   "was": 16.95,
+   "currency": "$",
+   "url": "https://www.aliexpress.com/item/1005012151431399.html",
+   "category": "Lights & Lighting",
+   "sold": 694,
+   "rating": 4.7,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/S7610cd87c8aa4ca59953c607b5c4501cm.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S2790ed39365d4cf8ba892ab2f5b4cf4b3.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S1d6627952f2d453bab9f6c251801367a3.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S360914243c594d569ef7f9be2f092823o.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S44e0f6fa46a84ac1bac821f42b9f99b6Q.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S3a2eb01bbcc14cd097318eda84d3bc19d.jpg"
+   ],
+   "history": [
+    [
+     "2026-11-16",
+     7.29
+    ]
+   ]
+  },
+  {
+   "id": "1005008761871875",
+   "store": "ALIEXPRESS",
+   "title": "Europe and America Fashion Gold Color Stainless Steel Water Drop Tassel Pendant Necklace for Women Clavicle Chain Paty Jewelry",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sc193f19bfa3b4c9f891d3cb71722b370l.jpg",
+   "price": 2.03,
+   "was": 4.52,
+   "currency": "$",
+   "url": "https://www.aliexpress.com/item/1005008761871875.html",
+   "category": "Jewelry & Accessories",
+   "sold": 870,
+   "rating": 4.4,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sc193f19bfa3b4c9f891d3cb71722b370l.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S017355fa30ff45b3997ca7dcfa289c58n.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sa1d6f54545e74e35b7a759f2d1371097j.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sac2d97dee00944569ef175f994b876cb6.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S6b35adc5b5b24d9599d872f4b19d3d69C.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S2b560fa150ad460c93d71534ba5676cd8.jpg"
+   ],
+   "history": [
+    [
+     "2026-11-16",
+     2.03
+    ]
+   ]
+  },
+  {
+   "id": "1005012103459254",
+   "store": "ALIEXPRESS",
+   "title": "Vacation Elegant Thong Slides Women Heeled Sandals Square Toe Clear Brown Kitten Heel Summer Beach Party Shoes Woman Flip Flops",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S969212fe220a4b4883854123c242685aV.jpg",
+   "price": 9.85,
+   "was": 24.02,
+   "currency": "$",
+   "url": "https://www.aliexpress.com/item/1005012103459254.html",
+   "category": "Shoes",
+   "sold": 365,
    "rating": 4.5,
-   "sold": 100000,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/S969212fe220a4b4883854123c242685aV.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sed71d17e558943beb254d9b169b0dbfd3.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S9013392cbf6a4a718ddb5095b9e17d9cw.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S8d78746257734a74aa002d0e3a788b198.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Se1cc1d68021f415fb6ac3c5601aadb74A.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S706053ead67b419bba4380eccb33e4d10.jpg"
+   ],
    "history": [
     [
      "2026-11-16",
-     1.36
+     9.85
     ]
    ]
   },
   {
-   "id": "1005010567441252",
+   "id": "1005012541563627",
    "store": "ALIEXPRESS",
-   "title": "1pcs-5pcs 60W PD USB-C to USB C Fast Charger Cable For Apple iPhone",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S8c721cdebe1c4892ae3198db84d0e7ffZ.jpg_350x350.jpg",
-   "price": 1.73,
+   "title": "22CDs European and American Pop Band Songs Classic Songs Discs Cd Album Music Discs (1976-2018)",
+   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S5aac8a8fb45042939f647d891d28e029D.jpg",
+   "price": 57.69,
+   "was": 134.16,
    "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005010567441252.html",
-   "rating": 4.8,
-   "sold": 50000,
-   "history": [
-    [
-     "2026-11-16",
-     1.73
-    ]
-   ]
-  },
-  {
-   "id": "1005007805554273",
-   "store": "ALIEXPRESS",
-   "title": "1PCS Travel Toothbrush Head Covers Toothbrush Protector Cap Brush Pod",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S4def8633abde425daaacf16cd053b3bet.jpg_350x350.jpg",
-   "price": 1.34,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005007805554273.html",
-   "rating": 4.7,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     1.34
-    ]
-   ]
-  },
-  {
-   "id": "1005008262621117",
-   "store": "ALIEXPRESS",
-   "title": "Disposable Food Cover Food Grade Plastic Elastic Food Lids Wrap Bags",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sa928c4301ac241259c14dd2b611e28a19.jpg_350x350.jpg",
-   "price": 2.14,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005008262621117.html",
-   "rating": 4.6,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     2.14
-    ]
-   ]
-  },
-  {
-   "id": "1005010363536815",
-   "store": "ALIEXPRESS",
-   "title": "UTRAI 5 in 1 6000A Car Jump Starter 150PSI Air Pump PD30W Power Bank",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sb37c57a5ea264df7ace19e54f3269185m.jpg_350x350.jpg",
-   "price": 84.61,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005010363536815.html",
+   "url": "https://www.aliexpress.com/item/1005012541563627.html",
+   "category": "Books & Cultural Merchandise",
+   "sold": 362,
    "rating": 4.9,
-   "sold": 900,
-   "shipping": 0,
+   "images": [
+    "https://ae-pic-a1.aliexpress-media.com/kf/S5aac8a8fb45042939f647d891d28e029D.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S0a17ff84512b4afd82ad4e0ca051f2e4o.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S67136c5d84d04602befd482be746c8b4C.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sa6a17aa8eb6b43988da41b08b67c1462I.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sf7fa7d0b06394fdca759e7ef2f193c014.jpg"
+   ],
    "history": [
     [
      "2026-11-16",
-     84.61
-    ]
-   ]
-  },
-  {
-   "id": "1005006926453576",
-   "store": "ALIEXPRESS",
-   "title": "Ultra-strong Double Sided Adhesive Monster Tape Home Appliance",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S491cdf67381c4f73bd2f876cb8561380D.jpg_350x350.jpg",
-   "price": 1.59,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005006926453576.html",
-   "rating": 4.6,
-   "sold": 100000,
-   "history": [
-    [
-     "2026-11-16",
-     1.59
-    ]
-   ]
-  },
-  {
-   "id": "1005006505041416",
-   "store": "ALIEXPRESS",
-   "title": "UGREEN PD100W USB Type C To USB C Cable for iPhone Duo 18Pro 17",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S18da3090730446c4a4b4dc6623757a70E.jpg_350x350.jpg",
-   "price": 4.1,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005006505041416.html",
-   "rating": 4.9,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     4.1
-    ]
-   ]
-  },
-  {
-   "id": "1005002636638923",
-   "store": "ALIEXPRESS",
-   "title": "INKBIRD EU Plug Vacuum Sous Vide Cooker Immersion Circulator Accurate",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S7300e518a9214a9295cdc12058c7fc32O.jpg_350x350.jpg",
-   "price": 71.28,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005002636638923.html",
-   "rating": 5,
-   "sold": 193,
-   "history": [
-    [
-     "2026-11-16",
-     71.28
-    ]
-   ]
-  },
-  {
-   "id": "1005009983850790",
-   "store": "ALIEXPRESS",
-   "title": "Mobile Phone Speaker Charging Port Cleaning Set Dust Plug for iPhone",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S076e3a103e9849ce81b230e396ee08aer.jpg_350x350.jpg",
-   "price": 0.72,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005009983850790.html",
-   "rating": 4.6,
-   "sold": 50000,
-   "history": [
-    [
-     "2026-11-16",
-     0.72
-    ]
-   ]
-  },
-  {
-   "id": "1005009330821798",
-   "store": "ALIEXPRESS",
-   "title": "Global Version OnePlus Buds 4 True Wireless AI Call Noise Cancelling",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sf83bc20186f44283a2c49d9ece398512R.jpg_350x350.jpg",
-   "price": 74,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005009330821798.html",
-   "rating": 4.8,
-   "sold": 1000,
-   "history": [
-    [
-     "2026-11-16",
-     74
-    ]
-   ]
-  },
-  {
-   "id": "1005008530171843",
-   "store": "ALIEXPRESS",
-   "title": "ONEVAN 4000W Brushless Electric Turbo Blower Jet Fan 400M/S 300000RPM",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S154e1f38dc1e416f8a1cbed51a3e7f19Y.jpg_350x350.jpg",
-   "price": 34.91,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005008530171843.html",
-   "rating": 4.7,
-   "sold": 3000,
-   "history": [
-    [
-     "2026-11-16",
-     34.91
-    ]
-   ]
-  },
-  {
-   "id": "1005005912594648",
-   "store": "ALIEXPRESS",
-   "title": "Baseus USB Type C To USB C Cable For iPhone 18 17 100W/5A PD Fast",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S0c8788b5cc0b489bb1a1d1941d35b10dG.jpg_350x350.jpg",
-   "price": 3.05,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005005912594648.html",
-   "rating": 4.9,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     3.05
-    ]
-   ]
-  },
-  {
-   "id": "1005006826603858",
-   "store": "ALIEXPRESS",
-   "title": "5 Inch Video Baby Monitor With Camera PTZ Zoom Babyphone Cam Security",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/See82af97505f478da150d6035b0481c6Y.jpg_350x350.jpg",
-   "price": 42.62,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005006826603858.html",
-   "rating": 4.6,
-   "sold": 4000,
-   "history": [
-    [
-     "2026-11-16",
-     42.62
-    ]
-   ]
-  },
-  {
-   "id": "1005006641990725",
-   "store": "ALIEXPRESS",
-   "title": "New MIJIA Handheld Garment Steamer 2 Iron Home Electric Steam Cleaner",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Se6c5d9fd0ad14e888a47ffc6209e7135a.jpg_350x350.jpg",
-   "price": 36.07,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005006641990725.html",
-   "rating": 4.8,
-   "sold": 2000,
-   "history": [
-    [
-     "2026-11-16",
-     36.07
-    ]
-   ]
-  },
-  {
-   "id": "1005005570781785",
-   "store": "ALIEXPRESS",
-   "title": "Microfiber Car Washer Sponge Cleaning Car Care Detailing Brushes",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S19b59a14e48545d087d55964c27c46a2y.jpg_350x350.jpg",
-   "price": 3.18,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005005570781785.html",
-   "rating": 4.8,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     3.18
-    ]
-   ]
-  },
-  {
-   "id": "1005007294796796",
-   "store": "ALIEXPRESS",
-   "title": "1000/100Pcs Nylon Cable Ties Self-locking Cord Ties Straps Adjustable",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S4a809c8a4c4f49419f8e23a771880afaN.jpg_350x350.jpg",
-   "price": 2.08,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005007294796796.html",
-   "rating": 4.7,
-   "sold": 50000,
-   "history": [
-    [
-     "2026-11-16",
-     2.08
-    ]
-   ]
-  },
-  {
-   "id": "1005010402015572",
-   "store": "ALIEXPRESS",
-   "title": "Best-selling Fruit Car Cup Stainless Steel Insulated Cup",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sd7f70404629e488e9e7731f4583f2390P.jpg_350x350.jpg",
-   "price": 20.69,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005010402015572.html",
-   "rating": 4.6,
-   "sold": 3000,
-   "history": [
-    [
-     "2026-11-16",
-     20.69
-    ]
-   ]
-  },
-  {
-   "id": "1005002702009187",
-   "store": "ALIEXPRESS",
-   "title": "70mai Dash Cam M210 RC21 Set Dual-Channel 1080P Supercapacitor Voice",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S05f9773844104311a9f51abc24320206a.jpg_350x350.jpg",
-   "price": 44.5,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005002702009187.html",
-   "rating": 4.8,
-   "sold": 338,
-   "history": [
-    [
-     "2026-11-16",
-     44.5
-    ]
-   ]
-  },
-  {
-   "id": "1005008619263250",
-   "store": "ALIEXPRESS",
-   "title": "1/3/6 Portable and Convenient Stain Remover Pen for Emergency Stain",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S055110790cd44432b0f4053e37a4c299H.jpg_350x350.jpg",
-   "price": 2.52,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005008619263250.html",
-   "rating": 4.7,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     2.52
-    ]
-   ]
-  },
-  {
-   "id": "1005008492202456",
-   "store": "ALIEXPRESS",
-   "title": "Baseus 145W Power Bank 20800mAh Dual USB A USB C PD 100W Fast",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/Sc6759b45d683471d844beae21173fd3dt.jpg_350x350.jpg",
-   "price": 71.99,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005008492202456.html",
-   "rating": 4.8,
-   "sold": 5000,
-   "history": [
-    [
-     "2026-11-16",
-     71.99
-    ]
-   ]
-  },
-  {
-   "id": "1005007370571569",
-   "store": "ALIEXPRESS",
-   "title": "Multi-Purpose Hooks Adhesive Wall Hanging Mop Rack Broom Hanger Hook",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S49422a019eaa4eb88db34434cdf52d86d.jpg_350x350.jpg",
-   "price": 1.07,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005007370571569.html",
-   "rating": 4.5,
-   "sold": 10000,
-   "history": [
-    [
-     "2026-11-16",
-     1.07
-    ]
-   ]
-  },
-  {
-   "id": "1005006140588434",
-   "store": "ALIEXPRESS",
-   "title": "Cdycam New 3.5 inch Wireless Video Baby Monitor Night Vision",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S9e6b18b572c14d7a990c8623b4619ca00.jpg_350x350.jpg",
-   "price": 37.4,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005006140588434.html",
-   "rating": 4.7,
-   "sold": 3000,
-   "history": [
-    [
-     "2026-11-16",
-     37.4
-    ]
-   ]
-  },
-  {
-   "id": "1005001296985821",
-   "store": "ALIEXPRESS",
-   "title": "Fosi Audio Phono Preamp for Turntable Phonograph Preamplifier Mini",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S95546bb095c348958a73f36b53c2bf04i.jpg_350x350.jpg",
-   "price": 51.51,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005001296985821.html",
-   "rating": 4.7,
-   "sold": 84,
-   "history": [
-    [
-     "2026-11-16",
-     51.51
-    ]
-   ]
-  },
-  {
-   "id": "1005010105459908",
-   "store": "ALIEXPRESS",
-   "title": "3D Shower Door Towel Hook for 8mm Glass Doors Bathroom Hanger for",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S57a89a1c015443668168a8e8049b77765.jpg_350x350.jpg",
-   "price": 1.67,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005010105459908.html",
-   "rating": 4.8,
-   "sold": 5000,
-   "history": [
-    [
-     "2026-11-16",
-     1.67
-    ]
-   ]
-  },
-  {
-   "id": "1005008603585460",
-   "store": "ALIEXPRESS",
-   "title": "UGREEN Studio Pro 48dB ANC Wireless Headphones Over Ear Bluetooth",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S23795c95ad9d474e9a8a8637d71b9eea7.jpg_350x350.jpg",
-   "price": 38.94,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005008603585460.html",
-   "rating": 4.8,
-   "sold": 5000,
-   "shipping": 0,
-   "history": [
-    [
-     "2026-11-16",
-     38.94
-    ]
-   ]
-  },
-  {
-   "id": "1005004427534616",
-   "store": "ALIEXPRESS",
-   "title": "INKBIRD Culinary Sous Vide ISV-200W Wi-Fi Precision Cooker",
-   "image": "https://ae-pic-a1.aliexpress-media.com/kf/S19a3fffd7880418b80d4568bcd25fc08n.jpg_350x350.jpg",
-   "price": 90.94,
-   "currency": "$",
-   "url": "https://www.aliexpress.com/item/1005004427534616.html",
-   "rating": 4.8,
-   "sold": 600,
-   "history": [
-    [
-     "2026-11-16",
-     90.94
+     57.69
     ]
    ]
   }
