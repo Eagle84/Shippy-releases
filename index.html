@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shippy — Track every package in one place</title>
-<meta name="description" content="Shippy pulls your AliExpress orders and shipments into one clean, private timeline on your Android phone. Private by design — everything stays on your device.">
+<meta name="description" content="Shippy keeps your orders, parcels and the best deals in one clean timeline. Private on Android, in your own account on the web.">
 <link rel="icon" href="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s64">
 <meta property="og:title" content="Shippy — Track every package in one place">
-<meta property="og:description" content="Private, on-device parcel & AliExpress order tracking for Android.">
+<meta property="og:description" content="Shippy keeps your orders, parcels and the best deals in one clean timeline. Private on Android, in your own account on the web.">
 <meta property="og:image" content="https://lh3.googleusercontent.com/lwfloOyfFzrsJcta53o7wIfGeA1-TK6mf5cZ7Xj9_Do8AH1X27F9LnKRIttjRF_7a3qyqa4wsWwB1saywppXQg=s512">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,10 @@
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:var(--ink-soft);font-weight:500;font-size:15px;transition:color .2s}
   .nav-links a:hover{color:var(--green-deep)}
+  .gbtn{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #dadce0;border-radius:999px;padding:9px 16px 9px 12px;font-weight:600;font-size:14px;color:var(--ink);box-shadow:0 4px 12px -8px rgba(24,43,58,.5);transition:transform .15s}
+  .gbtn:hover{transform:translateY(-1px)}
+  .gbtn svg{width:18px;height:18px;flex:none}
+  .store-btn.web{background:var(--green-deep)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .15s,background .2s}
   .nav-cta:hover{transform:translateY(-1px);background:#223b4f}
   @media(max-width:760px){.nav-links{display:none}}
@@ -175,6 +179,7 @@
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="support.html">Support</a>
+      <a class="gbtn" href="https://app.shippy.echlonlabs.com/login?provider=google" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.2 5.5-4.7 7.2l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.6z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7.9-6.1C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.3 0 11.7-2.1 15.6-5.7l-7.6-5.9c-2.1 1.4-4.8 2.3-8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Sign in with Google</a>
       <a class="nav-cta" href="#get">Get the app</a>
     </nav>
   </div>
@@ -187,21 +192,25 @@
   </div>
   <div class="wrap hero-grid">
     <div>
-      <span class="badge-pill"><span class="dot"></span>Private parcel tracking for Android</span>
+      <span class="badge-pill"><span class="dot"></span>Now on Android and in your browser</span>
       <h1>Track every package in <span class="hl">one place</span>.</h1>
       <p class="sub">Shippy pulls your AliExpress orders and shipments into one clean, private timeline — right on your Android phone. No clutter, no accounts to chase, no data leaving your device.</p>
       <div class="stores" id="get">
+        <a class="store-btn web" href="https://app.shippy.echlonlabs.com/" rel="noopener">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="4" stroke="#fff" stroke-width="3"/><path d="M14 40h20" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="st"><small>OPEN IN YOUR BROWSER</small><b>Shippy Web</b></span>
+        </a>
+        <a class="gbtn" href="https://app.shippy.echlonlabs.com/login?provider=google" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.2 5.5-4.7 7.2l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.6z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7.9-6.1C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.3 0 11.7-2.1 15.6-5.7l-7.6-5.9c-2.1 1.4-4.8 2.3-8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Sign in with Google</a>
+        <a class="store-btn web" href="https://app.shippy.echlonlabs.com/" rel="noopener">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="4" stroke="#fff" stroke-width="3"/><path d="M14 40h20" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="st"><small>OPEN IN YOUR BROWSER</small><b>Shippy Web</b></span>
+        </a>
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.shippy" target="_blank" rel="noopener">
           <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D4FF" d="M78 8v496c0 9 8 13 14 7l135-135-135-135L92 1c-6-6-14-2-14 7z"/><path fill="#00F076" d="M78 8c0-5 3-8 7-8 2 0 4 1 7 3l180 104-56 56L78 8z"/><path fill="#FFC107" d="M272 107l80 46c14 8 14 28 0 36l-80 46-56-56 56-56z"/><path fill="#FF3A44" d="M92 509c-2 2-4 3-7 3-4 0-7-3-7-8l145-145 56 56L92 509z"/></svg>
           <span class="st"><small>GET IT ON</small><b>Google Play</b></span>
         </a>
-        <span class="store-btn soon">
-          <span class="tag">Coming soon</span>
-          <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318 268c-1-57 46-84 48-85-26-38-67-43-81-44-34-3-67 20-84 20s-44-20-73-19c-37 1-72 22-91 55-39 68-10 168 28 223 19 27 41 57 70 56 28-1 39-18 73-18s43 18 73 17c30-1 49-27 67-54 21-31 30-61 30-62-1-1-58-22-58-89z"/><path fill="currentColor" d="M263 57c15-19 26-45 23-71-22 1-49 15-65 34-14 16-27 43-24 68 25 2 50-13 66-31z"/></svg>
-          <span class="st"><small>Download on the</small><b>App Store</b></span>
-        </span>
       </div>
-      <p class="hero-note">Android 8.0+ · Free · No ads · Your order data never leaves your phone.</p>
+      <p class="hero-note">Android 8.0+ or any browser · Free · No ads · On Android, your order data stays on your phone.</p>
     </div>
 
     <div class="phone-stage">
@@ -266,7 +275,8 @@
 
 <div class="strip">
   <div class="wrap">
-    <span>🔒 <b>On-device only</b></span>
+    <span>🔒 <b>Private by design</b></span>
+    <span>🌐 <b>Android + web, one account</b></span>
     <span>📦 <b>One timeline per order</b></span>
     <span>🚚 <b>Live carrier updates</b></span>
     <span>🚫 <b>No ads, no tracking</b></span>
@@ -280,11 +290,11 @@
     <p class="lead">Shippy does one thing well: it keeps your parcels organized and your data yours.</p>
     <div class="cards">
       <div class="card"><div class="emoji">📦</div><h3>One clean timeline</h3><p>Every order becomes a single timeline — carrier updates, status changes, and delivery estimates in one scroll.</p></div>
-      <div class="card"><div class="emoji">🔒</div><h3>Private by design</h3><p>Your order data is stored locally on your device. There's no Shippy server, so nothing is uploaded — ever.</p></div>
+      <div class="card"><div class="emoji">🔒</div><h3>Private by design</h3><p>On Android, your order data is stored only on your phone. On the web, the packages you add are kept in your own Shippy account, visible to nobody else, and you can delete them any time.</p></div>
       <div class="card"><div class="emoji">🛒</div><h3>Reads your own orders</h3><p>Signs in to your own AliExpress account to read your order and tracking history. Nothing is scraped from anyone else.</p></div>
       <div class="card"><div class="emoji">🚚</div><h3>Live delivery status</h3><p>See what's shipped, in transit, out for delivery, or delivered — with estimates so you know what lands when.</p></div>
       <div class="card"><div class="emoji">🔔</div><h3>Stay in the loop</h3><p>Follow each parcel's progress at a glance without digging through emails or app notifications.</p></div>
-      <div class="card"><div class="emoji">⚡</div><h3>Light and fast</h3><p>No ads, no bloat, no account to create for Shippy itself. Just open it and see where your stuff is.</p></div>
+      <div class="card"><div class="emoji">⚡</div><h3>Light and fast</h3><p>No ads, no bloat. Just open it and see where your stuff is.</p></div>
     </div>
   </div>
 </section>
@@ -295,7 +305,7 @@
     <h2>Up and running in under a minute</h2>
     <div class="steps">
       <div class="step"><div class="n">1</div><h3>Install Shippy</h3><p>Grab it from Google Play and open the app on your Android phone.</p></div>
-      <div class="step"><div class="n">2</div><h3>Connect your account</h3><p>Sign in to your own AliExpress account so Shippy can read your order history on-device.</p></div>
+      <div class="step"><div class="n">2</div><h3>Connect your account</h3><p>On Android, sign in to your own AliExpress account so Shippy can read your order history on-device. On the web, add a tracking number.</p></div>
       <div class="step"><div class="n">3</div><h3>Track everything</h3><p>Your orders appear as clean timelines — watch each package make its way to your door.</p></div>
     </div>
   </div>
@@ -305,17 +315,12 @@
   <div class="wrap">
     <div class="cta">
       <h2>Ready to see all your packages in one place?</h2>
-      <p>Shippy is free, lightweight and built for Android. Get it on Google Play and keep every order in one timeline.</p>
+      <p>Shippy is free and lightweight. Get it on Google Play or open it in your browser and keep every package in one timeline.</p>
       <div class="stores">
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.shippy" target="_blank" rel="noopener">
           <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D4FF" d="M78 8v496c0 9 8 13 14 7l135-135-135-135L92 1c-6-6-14-2-14 7z"/><path fill="#00F076" d="M78 8c0-5 3-8 7-8 2 0 4 1 7 3l180 104-56 56L78 8z"/><path fill="#FFC107" d="M272 107l80 46c14 8 14 28 0 36l-80 46-56-56 56-56z"/><path fill="#FF3A44" d="M92 509c-2 2-4 3-7 3-4 0-7-3-7-8l145-145 56 56L92 509z"/></svg>
           <span class="st"><small>GET IT ON</small><b>Google Play</b></span>
         </a>
-        <span class="store-btn soon">
-          <span class="tag">Coming soon</span>
-          <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318 268c-1-57 46-84 48-85-26-38-67-43-81-44-34-3-67 20-84 20s-44-20-73-19c-37 1-72 22-91 55-39 68-10 168 28 223 19 27 41 57 70 56 28-1 39-18 73-18s43 18 73 17c30-1 49-27 67-54 21-31 30-61 30-62-1-1-58-22-58-89z"/><path fill="currentColor" d="M263 57c15-19 26-45 23-71-22 1-49 15-65 34-14 16-27 43-24 68 25 2 50-13 66-31z"/></svg>
-          <span class="st"><small>Download on the</small><b>App Store</b></span>
-        </span>
       </div>
     </div>
   </div>
