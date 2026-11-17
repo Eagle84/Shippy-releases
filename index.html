@@ -44,15 +44,6 @@
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .15s,background .2s}
   .nav-cta:hover{transform:translateY(-1px);background:#223b4f}
   @media(max-width:760px){.nav-links{display:none}}
-  /* Phones: the hero stacks, the phone mockup sits under the text and never overflows the screen */
-  @media(max-width:860px){
-    .hero{padding:44px 0 90px}
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero h1 .hl{white-space:normal}
-    .phone-stage{justify-content:center}
-    .phone{width:min(308px,calc(100vw - 48px))}
-    .screen{height:auto;max-height:560px}
-  }
 
   /* Hero with pastoral Shippy background */
   .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#dcf0fb 0%, #eaf6f2 42%, #f1f8ef 100%);padding:72px 0 150px}
@@ -89,6 +80,16 @@
   .phone{position:relative;width:308px;border-radius:42px;background:#0f1d28;padding:11px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
   .phone .notch{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:7px;border-radius:999px;background:#2a3b49;z-index:3}
   .screen{border-radius:32px;overflow:hidden;background:#f4f6f5;height:600px;display:flex;flex-direction:column}
+  /* Phones: the hero stacks, the phone mockup sits under the text and never overflows the screen.
+     Kept after the rules above so it wins at equal specificity. */
+  @media(max-width:860px){
+    .hero{padding:44px 0 90px}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero h1 .hl{white-space:normal}
+    .phone-stage{justify-content:center}
+    .phone{width:min(308px,calc(100vw - 48px))}
+    .screen{height:auto;max-height:560px}
+  }
   .sbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px 4px;font-size:12px;font-weight:600;color:#17303f}
   .sbar .ic{display:flex;gap:5px;align-items:center}
   .appbar{background:var(--green);color:#fff;padding:10px 16px 16px}
