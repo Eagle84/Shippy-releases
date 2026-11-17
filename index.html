@@ -44,6 +44,15 @@
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .15s,background .2s}
   .nav-cta:hover{transform:translateY(-1px);background:#223b4f}
   @media(max-width:760px){.nav-links{display:none}}
+  /* Phones: the hero stacks, the phone mockup sits under the text and never overflows the screen */
+  @media(max-width:860px){
+    .hero{padding:44px 0 90px}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero h1 .hl{white-space:normal}
+    .phone-stage{justify-content:center}
+    .phone{width:min(308px,calc(100vw - 48px))}
+    .screen{height:auto;max-height:560px}
+  }
 
   /* Hero with pastoral Shippy background */
   .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#dcf0fb 0%, #eaf6f2 42%, #f1f8ef 100%);padding:72px 0 150px}
